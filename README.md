@@ -8,7 +8,7 @@ For this code, Python 3.6.9 is required. Instructions for a virtual environment 
 
 At this time, pip functionality is unavailable. Please use
 ```
-https://github.com/chaimurti/TVSPrune.git
+git clone https://github.com/chaimurti/TVSPrune.git
 ```
 to download required files. For CIFAR10/CIFAR100 experiments, the datasets and models will be downloaded automatically as well. Instructions coming soon for Imagenet experiments.
 
