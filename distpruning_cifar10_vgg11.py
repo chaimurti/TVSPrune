@@ -32,7 +32,7 @@ from torch.utils.data.sampler import SubsetRandomSampler
 import kneed as kneed
 
 
-# In[2]:
+
 
 
 device = torch.device('cuda')
@@ -47,19 +47,11 @@ model = torch.hub.load("chenyaofo/pytorch-cifar-models", "cifar100_vgg11_bn", pr
 model = model.to(device)
 
 
-# In[3]:
-
 
 print(model.features)
 
 
-# In[ ]:
 
-
-
-
-
-# In[4]:
 
 
 transform = transforms.Compose([
@@ -101,7 +93,7 @@ valid_loader = torch.utils.data.DataLoader(test_set, batch_size= 1, sampler=vali
                                            num_workers=num_workers)
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=2048, sampler=test_sampler, num_workers=num_workers)
 
-# In[5]:
+
 
 
 import matplotlib.pyplot as plt
@@ -121,7 +113,7 @@ def imshow(img):
 dataiter = iter(valid_loader)
 
 
-# In[6]:
+
 
 
 def ten2mat(tensor):
@@ -137,7 +129,7 @@ def eff_rank(matrix):
     return (r)
 
 
-# In[7]:
+
 
 
 #utility functions
