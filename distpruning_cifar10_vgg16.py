@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
 
 import torch
 import torchvision
@@ -34,8 +32,6 @@ import kneed as kneed
 from torch.utils.data.sampler import SubsetRandomSampler
 
 
-# In[ ]:
-
 
 device = torch.device('cuda')
 
@@ -49,19 +45,11 @@ model = torch.hub.load("chenyaofo/pytorch-cifar-models", "cifar100_vgg16_bn", pr
 model = model.to(device)
 
 
-# In[ ]:
-
 
 print(model.features)
 
 
-# In[ ]:
 
-
-
-
-
-# In[ ]:
 
 
 transform = transforms.Compose([
@@ -104,9 +92,6 @@ test_loader = torch.utils.data.DataLoader(test_set, batch_size=2048, sampler=tes
 
 
 
-# In[ ]:
-
-
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -124,7 +109,7 @@ def imshow(img):
 dataiter = iter(valid_loader)
 
 
-# In[ ]:
+
 
 
 def ten2mat(tensor):
@@ -140,7 +125,6 @@ def eff_rank(matrix):
     return (r)
 
 
-# In[ ]:
 
 
 #utility functions
@@ -488,9 +472,6 @@ def get_pruned_acc(nc, min_crit, min_list,model, conv_dict,test_loader,device):
     return model, T1
 
 
-# In[ ]:
-
-
 U = 60
 
 # accs = np.zeros(U)
@@ -572,12 +553,6 @@ while Crit_frac > 0:
         
     
     
-    
-    
-
-
-# In[ ]:
-
 
 a_file = open("test_vgg16_cifar100.txt", "a")
 
